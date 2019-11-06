@@ -1,0 +1,16 @@
+.layui-form{
+    width: 80%;
+    min-width: 700px;
+}
+
+.layui-form .layui-form-label{
+    width: 130px;
+    box-sizing: border-box;
+}
+.layui-form .layui-input-block{
+    margin-left: 130px;
+}
+
+#infoBtn{
+    display: none;
+}

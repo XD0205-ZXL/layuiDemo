@@ -1,0 +1,29 @@
+.layui-card-body{
+    padding: 10px 0;
+}
+
+#top_toolbar_view{
+    text-align: right;
+    margin:20px 0 10px;
+}
+
+.layui-btn-container .layui-btn+.layui-btn:last-child{
+    margin-right: 0;
+}
+
+.layui-table-view .layui-table td, .layui-table-view .layui-table th{
+    text-align: center;
+}
+
+.layui-form{
+    /* width: 700px; */
+    margin: 0 auto;
+}
+
+.warning{
+    color:#f4364c;
+}
+
+.btnGroup{
+    text-align: center;
+}

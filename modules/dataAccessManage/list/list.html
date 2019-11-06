@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../static/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/app.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="layui-fluid">
+        <div class="layui-card">
+            <div class="layui-card-header">数据权限管理</div>
+            <div class="layui-card-body">
+                <!-- 顶部搜索条件的视图容器  -->
+                <div class="layui-row">
+                    <div class="layui-col-xs4">
+                        <label class="layui-form-label" style="width:100px">数据权限名称:</label>
+                        <div class="layui-input-block" style="margin-left:130px">
+                            <input type="text" name="title" lay-verify="title" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-row">
+                    <!-- 顶部操作按钮的视图容器 -->
+                    <div class="layui-btn-container" id="top_toolbar_view">
+                        <button type="button" class="layui-btn layui-btn-sm">
+                            <i class="layui-icon">&#xe615;</i>查询
+                        </button>
+                        <button type="button" id="add" class="layui-btn layui-btn-sm layui-btn-normal">
+                            <i class="layui-icon">&#xe654;</i> 新建
+                        </button>
+                        <button type="button" id="openDialog" class="layui-btn layui-btn-sm layui-btn-warm">
+                            <i class="layui-icon">&#xe642;</i> 修改
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-sm layui-btn-danger">
+                            <i class="layui-icon">&#xe652;</i>删除
+                        </button>
+                        <button type="button" id="openDialog" class="layui-btn layui-btn-sm layui-btn-warm">
+                            <i class="layui-icon">&#xe60a;</i> 详情
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- 表格的容器  lay-filter 相当于这个表格的唯一id 表格的初始化 和 表格里的按钮事件绑定都会用到这个id--> 
+                <!-- 建议id 与 lay-filter 相同, 如果页面存在多个table，那么这个id必须唯一 -->
+                <table id="dataAccessList" lay-filter="dataAccessList"></table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../../../static/layui/layui.all.js"></script>
+
+<!-- table右侧的按钮组 -->
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+  </script>
